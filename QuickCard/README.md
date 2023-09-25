@@ -144,3 +144,65 @@ VStack(alignment: .leading) {
         }
     }
     ```
+
+    ## รู้จักกับ @State
+    1. เพิ่มตัวแปร State ขึ้นมา(เมื่อตัวแปรเปลี่ยนจะมีการ re-render หน้าจอใหม่)
+        ```
+        @State var value: Double = 0.5
+        ```
+    1. เพิ่ม Slider เข้ามาวางไว้ด้านบน
+        ```
+        HStack {
+            Circle()
+                .frame(width: 25)
+                .foregroundColor(Color("PrimaryColor"))
+            Slider(value: $value)
+        }
+        ```
+        ถ้าต้องการให้ value นั้น read-only เราจะใช้ .constant() ครอบ
+        ```
+        HStack {
+            Circle()
+                .frame(width: 25)
+                .foregroundColor(Color("PrimaryColor"))
+            Slider(value: .constant(value))
+        }
+        ```
+
+    1. หลังจากนั้น Content Preview จะ Error เราต้องกำหนดตัวแปร @State ให้ด้วย โดยที่ต้องกำหนดให้เป็น Static member
+        ```
+        struct ContentView_Previews: PreviewProvider {
+            @State static var value = 0.5
+            static var previews: some View {
+                ContentView(value: value)
+            }
+        }
+        ```
+        กรณีที่ไม่ต้องการประกาศตัวแปร @State ขึ้นมาเราอาจใช้ .constant() ครอบแทนได้
+        ```
+        struct ContentView_Previews: PreviewProvider {
+            static var previews: some View {
+                ContentView(value: .constant(0.5))
+            }
+        }
+        ```
+    1. ทดสอบการแก้ไขค่าของตัวแปรจากใน Sub-View
+        * ทำการเพิ่มปุ่ม reset เข้าไปใน BusinessCard
+            ```
+            VStack(alignment: .leading) {
+                Text("John Doe").font(.title)
+                
+                ....
+
+                Button(action: reset){
+                    Label("Reset", systemImage: "clear.fill")
+                }.padding(.top)
+            }.foregroundColor(.white)
+            ```
+        * เพิ่ม function reset เข้าไปใน struct BusinessCard
+            ```
+            func reset(){
+                opacity = 0.5
+            }
+            ```
+กดอ่านเรื่อง [Navigation](Navigation.md) ต่อ
