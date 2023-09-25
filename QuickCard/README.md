@@ -205,4 +205,4 @@ VStack(alignment: .leading) {
                 opacity = 0.5
             }
             ```
-กดอ่านเรื่อง [Navigation](Navigation.md) ต่อ
+ดูเรื่อง [Navigation](Navigation.md) ต่อ
