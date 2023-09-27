@@ -139,8 +139,10 @@ VStack(alignment: .leading) {
 1. เมื่อ View ของเราล้นจอ จึงต้องครอบด้วย ScrollView เพื่อให้เราสามารถจะเลื่อนขึ้นหรือเลื่อนลงได้
     ```
     ScrollView( .vertical, showsIndicators: false ){
-        ForEach(data, id: \.self){ i in
-            BusinessCard()
+        VStack{
+            ForEach(data, id: \.self){ i in
+                BusinessCard()
+            }
         }
     }
     ```

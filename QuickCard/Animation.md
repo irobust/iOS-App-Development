@@ -13,20 +13,48 @@
 1. เพิ่ม Event Tap เข้าไปใน BusinessCard(Tap ที่ BusinessCard แล้ว Chart จะโผล่ขึ้นมา)
     ```
     BusinessCard(opacity: .constant(1.0), user: user)
-    .gesture(TapGesture().onEnded {
+    .onTapGesture {
         withAnimation(.easeIn, {
             self.isChartVisible.toggle()
         })
-    })
+    }
+    ```
+    หรือจะนับจำนวน Tap
+    ```
+    ```
+    BusinessCard(opacity: .constant(1.0), user: user)
+    .onTapGesture(count: 2) {
+        withAnimation(.easeIn, {
+            self.isChartVisible.toggle()
+        })
+    }
+    ```
     ```
 1. ลองเปลี่ยนจาก TapGesture ไปเป็น LongPressGesture
     ```
     BusinessCard(opacity: .constant(1.0), user: user)
-    .gesture(LongPressGesture().onEnded {_ in
+    .onLongPressGesture {
         withAnimation(.easeIn, {
             self.isChartVisible.toggle()
         })
-    })
+    }
+    ```
+1. เราสามารถกำหนด Animation ใน Stack แบบนี้ก็ได้
+    ```
+    ZStack{
+        
+        ...
+
+        .scaleEffect(isChartLoaded ? 1.2 : 1.0)
+        .animation(.easeOut, value: isChartLoaded)
+    }
+    ```
+
+    ```
+    BusinessCard(opacity: .constant(1.0), user: user)
+    .onTapGesture {
+        self.isChartVisible.toggle()
+    }
     ```
 1. กำหนด Transition ให้ ChartView วิ่งขึ้นมาจากด้านล่าง
     ```
@@ -47,7 +75,7 @@
     ```
 1. เพิ่ม Event onDisAppear เข้าไปใน ChartView
     ```
-    .onDisappear{
+    .onDisappear {
         isChartLoaded = false
     }
     ```

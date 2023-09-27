@@ -23,70 +23,70 @@
                 email: "mobileunder10@gmail.com",
                 companyUrl: "mobileunder10.com",
                 address: "12345 Highland Road",
-                stat: Stat(ordered: 50, completed: 60, satisfaction: 7, delayDays: 80, duration: 90)),
+                stat: Stat(requests: 50, completed: 60, satisfaction: 7, delayDays: 80, duration: 90)),
             User(firstName: "Nermal",
                 lastName: "Vero",
                 title: "Software Engineer",
                 email: "nvero@yahoo.com",
                 companyUrl: "vero123.com",
                 address: "8822 Royal Road",
-                stat: Stat(ordered: 10, completed: 20, satisfaction: 3, delayDays: 40, duration: 50)),
+                stat: Stat(requests: 10, completed: 20, satisfaction: 3, delayDays: 40, duration: 50)),
             User(firstName: "Evelyn",
                 lastName: "Smith",
                 title: "Business Analyst",
                 email: "esmith@outlook.com",
                 companyUrl: "esmithvet.com",
                 address: "5544 Camino Del Sur",
-                stat: Stat(ordered: 20, completed: 40, satisfaction: 6, delayDays: 80, duration: 100)),
+                stat: Stat(requests: 20, completed: 40, satisfaction: 6, delayDays: 80, duration: 100)),
             User(firstName: "Phoebe",
                 lastName: "Lee",
                 title: "Senior Business Analyst",
                 email: "plee@gmail.com",
                 companyUrl: "pleeproducts.com",
                 address: "12345 Phaser Court",
-                stat: Stat(ordered: 30, completed: 60, satisfaction: 3, delayDays: 65, duration: 35)),
+                stat: Stat(requests: 30, completed: 60, satisfaction: 3, delayDays: 65, duration: 35)),
             User(firstName: "Aaron",
                 lastName: "Huang",
                 title: "Mechanical Engineer",
                 email: "ahuang@gmail.com",
                 companyUrl: "ahrobots.com",
                 address: "789 Robot Road",
-                stat: Stat(ordered: 50, completed: 80, satisfaction: 9, delayDays: 10, duration: 10)),
+                stat: Stat(requests: 50, completed: 80, satisfaction: 9, delayDays: 10, duration: 10)),
             User(firstName: "Nathan",
                 lastName: "Chan",
                 title: "Product Engineer",
                 email: "mobileunder10@gmail.com",
                 companyUrl: "mobileunder10.com",
                 address: "12345 Highland Road",
-                stat: Stat(ordered: 10, completed: 20, satisfaction: 3, delayDays: 40, duration: 50)),
+                stat: Stat(requests: 10, completed: 20, satisfaction: 3, delayDays: 40, duration: 50)),
             User(firstName: "Avery",
                 lastName: "Johnson",
                 title: "Senior Software Engineer",
                 email: "averyjohnson@outlook.com",
                 companyUrl: "avpharm.com",
                 address: "12121 Pathos Lane",
-                stat: Stat(ordered: 30, completed: 60, satisfaction: 9, delayDays: 30, duration: 60)),
+                stat: Stat(requests: 30, completed: 60, satisfaction: 9, delayDays: 30, duration: 60)),
             User(firstName: "Harriet",
                 lastName: "Brown",
                 title: "Staff Software Engineer",
                 email: "hbrown@yahoo.com",
                 companyUrl: "catfurrr.com",
                 address: "999 Cat Fur Lane",
-                stat: Stat(ordered: 20, completed: 40, satisfaction: 6, delayDays: 80, duration: 90)),
+                stat: Stat(requests: 20, completed: 40, satisfaction: 6, delayDays: 80, duration: 90)),
             User(firstName: "Lillian",
                 lastName: "Martin",
                 title: "Software Engineer",
                 email: "lmartinez@gmail.com",
                 companyUrl: "sharksneversleep.com",
                 address: "123 Under the Sea Lane",
-                stat: Stat(ordered: 55, completed: 65, satisfaction: 7, delayDays: 85, duration: 95)),
+                stat: Stat(requests: 55, completed: 65, satisfaction: 7, delayDays: 85, duration: 95)),
             User(firstName: "Natalie",
                 lastName: "Kim",
                 title: "Software Manager",
                 email: "nataliekim@yahoo.com",
                 companyUrl: "natalite.com",
                 address: "8888 Hidden Marker Road",
-                stat: Stat(ordered: 15, completed: 25, satisfaction: 3, delayDays: 45, duration: 55)),
+                stat: Stat(requests: 15, completed: 25, satisfaction: 3, delayDays: 45, duration: 55)),
         ]
     }
     ```
@@ -94,7 +94,7 @@
     ```
     struct Stat: Identifiable {
         let id = UUID()
-        var ordered: Int
+        var requests: Int
         var completed: Int
         var satisfaction: Int
         var delayDays: Int
@@ -114,7 +114,7 @@
     ```
 1. ใช้ตัวอย่าง User นี้ในการ preview ตรงไหนที่ error ให้ใส่ user นี้ลงไป
     ```
-    User(firstName: "Natalie", lastName: "Kim", title: "Software Manager", email: "nataliekim@yahoo.com", companyUrl: "natalite.com", address: "8888 Hidden Marker Road", stat: Stat(ordered: 15, completed: 25, satisfaction: 3, delayDays: 45, duration: 55))
+    User(firstName: "Natalie", lastName: "Kim", title: "Software Manager", email: "nataliekim@yahoo.com", companyUrl: "natalite.com", address: "8888 Hidden Marker Road", stat: Stat(requests: 15, completed: 25, satisfaction: 3, delayDays: 45, duration: 55))
     ```
 1. ใส่ตัวอย่าง user ลงใน Content_Preview หน้า BusinessCard และ CardDetail
 
@@ -151,7 +151,7 @@
     ```
     struct ChartView_Previews: PreviewProvider {
         static var previews: some View {
-            ChartView(stat: Stat(ordered: 20, completed: 10, satisfaction: 15, delayDays: 10, duration: 30))
+            ChartView(stat: Stat(requests: 20, completed: 10, satisfaction: 15, delayDays: 10, duration: 30))
         }
     }
     ```
@@ -169,7 +169,7 @@
         Rectangle()
             .fill(Color.green)
             .frame(width: proxy.size.width / 5
-                    , height: proxy.size.height * CGFloat(stat.ordered) / 100)
+                    , height: proxy.size.height * CGFloat(stat.requests) / 100)
         Rectangle()
             .fill(Color.green)
             .frame(width: proxy.size.width / 5
@@ -202,7 +202,7 @@
         ```
     * เปลี่ยน Rectangle() ในไฟล์ ChartView.swift ไปเป็น BarView
         ```
-        BarView(size: proxy.size, value: stat.ordered)
+        BarView(size: proxy.size, value: stat.request)
         BarView(size: proxy.size, value: stat.completed)
         BarView(size: proxy.size, value: stat.satisfaction)
         BarView(size: proxy.size, value: stat.delayDays)
