@@ -209,4 +209,4 @@
         BarView(size: proxy.size, value: stat.duration)
         ```
 
-ดูเรื่อง [Animation](Amination.md) ต่อ
+ดูเรื่อง [Animation](Animation.md) ต่อ
