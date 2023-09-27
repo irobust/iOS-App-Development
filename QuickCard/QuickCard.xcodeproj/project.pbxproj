@@ -12,8 +12,8 @@
 		DB2803A52ABD7073003E9C05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB2803A42ABD7073003E9C05 /* Assets.xcassets */; };
 		DB2803A82ABD7073003E9C05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB2803A72ABD7073003E9C05 /* Preview Assets.xcassets */; };
 		DB2803B12ABD83CE003E9C05 /* BusinessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2803B02ABD83CE003E9C05 /* BusinessCard.swift */; };
-		DB2803B32ABD9351003E9C05 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2803B22ABD9351003E9C05 /* ImageView.swift */; };
 		DB2803B52ABD9B58003E9C05 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2803B42ABD9B58003E9C05 /* ChartView.swift */; };
+		DB28041A2AC44963003E9C05 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804192AC44963003E9C05 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +23,8 @@
 		DB2803A42ABD7073003E9C05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB2803A72ABD7073003E9C05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB2803B02ABD83CE003E9C05 /* BusinessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCard.swift; sourceTree = "<group>"; };
-		DB2803B22ABD9351003E9C05 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		DB2803B42ABD9B58003E9C05 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		DB2804192AC44963003E9C05 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +41,6 @@
 		DB2803942ABD7073003E9C05 = {
 			isa = PBXGroup;
 			children = (
-				DB2803B22ABD9351003E9C05 /* ImageView.swift */,
 				DB28039F2ABD7073003E9C05 /* QuickCard */,
 				DB28039E2ABD7073003E9C05 /* Products */,
 			);
@@ -60,6 +59,7 @@
 			children = (
 				DB2803A02ABD7073003E9C05 /* QuickCardApp.swift */,
 				DB2803A22ABD7073003E9C05 /* ContentView.swift */,
+				DB2804192AC44963003E9C05 /* ImageView.swift */,
 				DB2803B02ABD83CE003E9C05 /* BusinessCard.swift */,
 				DB2803B42ABD9B58003E9C05 /* ChartView.swift */,
 				DB2803A42ABD7073003E9C05 /* Assets.xcassets */,
@@ -146,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB2803B32ABD9351003E9C05 /* ImageView.swift in Sources */,
+				DB28041A2AC44963003E9C05 /* ImageView.swift in Sources */,
 				DB2803B12ABD83CE003E9C05 /* BusinessCard.swift in Sources */,
 				DB2803A32ABD7073003E9C05 /* ContentView.swift in Sources */,
 				DB2803B52ABD9B58003E9C05 /* ChartView.swift in Sources */,

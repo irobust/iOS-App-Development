@@ -2,7 +2,7 @@
 //  ImageView.swift
 //  QuickCard
 //
-//  Created by Phanupong Permpimol on 22/9/2566 BE.
+//  Created by Phanupong Permpimol on 27/9/2566 BE.
 //
 
 import SwiftUI
@@ -25,5 +25,3 @@ struct ImageView_Previews: PreviewProvider {
         ImageView(imageName: "envelope.badge.fill", text: .constant("john@example.com"))
     }
 }
-
-

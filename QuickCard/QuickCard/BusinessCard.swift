@@ -51,9 +51,9 @@ struct BusinessCard: View {
                 Text(user.position).italic()
                     .foregroundColor(.white)
                 Spacer()
-                ImageView(imageName: "envelope.badge.fill", text: .constant(user.email))
-                ImageView(imageName: "link.circle.fill", text: .constant(user.link))
-                ImageView(imageName: "location.circle.fill", text: .constant(user.location))
+                ImageView(imageName: "envelope.badge.fill", text: $user.email)
+                ImageView(imageName: "link.circle.fill", text: $user.link)
+                ImageView(imageName: "location.circle.fill", text: $user.location)
             }.frame(width: 300, height: 130)
         }
     }

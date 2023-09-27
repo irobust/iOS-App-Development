@@ -28,8 +28,8 @@ struct ContentView: View {
 //        }
         
         NavigationView {
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack{
+            ScrollView(.vertical, showsIndicators: false){
+                VStack{
                     ForEach(data, id:\.self){ item in
                         NavigationLink(destination: ChartView()) {
                             BusinessCard()
