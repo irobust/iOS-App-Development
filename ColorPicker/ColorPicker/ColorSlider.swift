@@ -28,7 +28,7 @@ struct ColorSlider: View {
                 }
             }
             
-            Text("red: \(String(format: "%.1f", customColor.red)), green: \(String(format: "%.1f", customColor.red)), blue: \(String(format: "%.1f", customColor.red))")
+            Text("red: \(String(format: "%.1f", customColor.red)), green: \(String(format: "%.1f", customColor.green)), blue: \(String(format: "%.1f", customColor.blue))")
             Text("Current theme is \(theme.name)")
         }
     }
