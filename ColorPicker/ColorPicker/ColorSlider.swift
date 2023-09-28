@@ -18,9 +18,17 @@ struct ColorSlider: View {
             HStack{
                 Image(systemName: "circle.fill")
                     .foregroundColor(color)
-                Slider(value: $customColor.red, in: 0...1, step: 0.1)
+                switch color {
+                case Color.green:
+                    Slider(value: $customColor.green, in: 0...1, step: 0.1)
+                case Color.blue:
+                    Slider(value: $customColor.blue, in: 0...1, step: 0.1)
+                default:
+                    Slider(value: $customColor.red, in: 0...1, step: 0.1)
+                }
             }
-            Text("red: \(customColor.red), green: \(customColor.green), blue: \(customColor.blue)")
+            
+            Text("red: \(String(format: "%.1f", customColor.red)), green: \(String(format: "%.1f", customColor.red)), blue: \(String(format: "%.1f", customColor.red))")
             Text("Current theme is \(theme.name)")
         }
     }
