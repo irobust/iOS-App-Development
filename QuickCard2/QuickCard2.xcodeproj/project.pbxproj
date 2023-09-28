@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB2804462AC55506003E9C05 /* QuickCard2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804452AC55506003E9C05 /* QuickCard2App.swift */; };
+		DB2804482AC55506003E9C05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804472AC55506003E9C05 /* ContentView.swift */; };
+		DB28044A2AC55506003E9C05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB2804492AC55506003E9C05 /* Assets.xcassets */; };
+		DB28044D2AC55506003E9C05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB28044C2AC55506003E9C05 /* Preview Assets.xcassets */; };
+		DB2804542AC55663003E9C05 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804532AC55663003E9C05 /* ImageView.swift */; };
+		DB2804562AC5578B003E9C05 /* BusinessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804552AC5578B003E9C05 /* BusinessCard.swift */; };
+		DB2804582AC55E60003E9C05 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804572AC55E60003E9C05 /* ChartView.swift */; };
+		DB28045A2AC56026003E9C05 /* CardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804592AC56026003E9C05 /* CardDetail.swift */; };
+		DB28045D2AC5683A003E9C05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB28045C2AC5683A003E9C05 /* User.swift */; };
+		DB28045F2AC5698F003E9C05 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB28045E2AC5698F003E9C05 /* Stat.swift */; };
+		DB2804612AC5728C003E9C05 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804602AC5728C003E9C05 /* BarView.swift */; };
+		DB2804632AC58A52003E9C05 /* ListUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804622AC58A52003E9C05 /* ListUsers.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB2804422AC55506003E9C05 /* QuickCard2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickCard2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2804452AC55506003E9C05 /* QuickCard2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCard2App.swift; sourceTree = "<group>"; };
+		DB2804472AC55506003E9C05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB2804492AC55506003E9C05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB28044C2AC55506003E9C05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB2804532AC55663003E9C05 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		DB2804552AC5578B003E9C05 /* BusinessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCard.swift; sourceTree = "<group>"; };
+		DB2804572AC55E60003E9C05 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		DB2804592AC56026003E9C05 /* CardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetail.swift; sourceTree = "<group>"; };
+		DB28045C2AC5683A003E9C05 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DB28045E2AC5698F003E9C05 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
+		DB2804602AC5728C003E9C05 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		DB2804622AC58A52003E9C05 /* ListUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsers.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB28043F2AC55506003E9C05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB2804392AC55506003E9C05 = {
+			isa = PBXGroup;
+			children = (
+				DB2804442AC55506003E9C05 /* QuickCard2 */,
+				DB2804432AC55506003E9C05 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB2804432AC55506003E9C05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB2804422AC55506003E9C05 /* QuickCard2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB2804442AC55506003E9C05 /* QuickCard2 */ = {
+			isa = PBXGroup;
+			children = (
+				DB28045B2AC567B6003E9C05 /* Models */,
+				DB2804452AC55506003E9C05 /* QuickCard2App.swift */,
+				DB2804472AC55506003E9C05 /* ContentView.swift */,
+				DB2804552AC5578B003E9C05 /* BusinessCard.swift */,
+				DB2804532AC55663003E9C05 /* ImageView.swift */,
+				DB2804592AC56026003E9C05 /* CardDetail.swift */,
+				DB2804572AC55E60003E9C05 /* ChartView.swift */,
+				DB2804492AC55506003E9C05 /* Assets.xcassets */,
+				DB28044B2AC55506003E9C05 /* Preview Content */,
+				DB2804602AC5728C003E9C05 /* BarView.swift */,
+				DB2804622AC58A52003E9C05 /* ListUsers.swift */,
+			);
+			path = QuickCard2;
+			sourceTree = "<group>";
+		};
+		DB28044B2AC55506003E9C05 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DB28044C2AC55506003E9C05 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB28045B2AC567B6003E9C05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB28045C2AC5683A003E9C05 /* User.swift */,
+				DB28045E2AC5698F003E9C05 /* Stat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB2804412AC55506003E9C05 /* QuickCard2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB2804502AC55506003E9C05 /* Build configuration list for PBXNativeTarget "QuickCard2" */;
+			buildPhases = (
+				DB28043E2AC55506003E9C05 /* Sources */,
+				DB28043F2AC55506003E9C05 /* Frameworks */,
+				DB2804402AC55506003E9C05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickCard2;
+			productName = QuickCard2;
+			productReference = DB2804422AC55506003E9C05 /* QuickCard2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB28043A2AC55506003E9C05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					DB2804412AC55506003E9C05 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = DB28043D2AC55506003E9C05 /* Build configuration list for PBXProject "QuickCard2" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB2804392AC55506003E9C05;
+			productRefGroup = DB2804432AC55506003E9C05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB2804412AC55506003E9C05 /* QuickCard2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB2804402AC55506003E9C05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB28044D2AC55506003E9C05 /* Preview Assets.xcassets in Resources */,
+				DB28044A2AC55506003E9C05 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB28043E2AC55506003E9C05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB2804612AC5728C003E9C05 /* BarView.swift in Sources */,
+				DB2804542AC55663003E9C05 /* ImageView.swift in Sources */,
+				DB28045F2AC5698F003E9C05 /* Stat.swift in Sources */,
+				DB2804482AC55506003E9C05 /* ContentView.swift in Sources */,
+				DB28045A2AC56026003E9C05 /* CardDetail.swift in Sources */,
+				DB2804462AC55506003E9C05 /* QuickCard2App.swift in Sources */,
+				DB2804582AC55E60003E9C05 /* ChartView.swift in Sources */,
+				DB2804562AC5578B003E9C05 /* BusinessCard.swift in Sources */,
+				DB2804632AC58A52003E9C05 /* ListUsers.swift in Sources */,
+				DB28045D2AC5683A003E9C05 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DB28044E2AC55506003E9C05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB28044F2AC55506003E9C05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB2804512AC55506003E9C05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"QuickCard2/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arit.QuickCard2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB2804522AC55506003E9C05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"QuickCard2/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arit.QuickCard2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB28043D2AC55506003E9C05 /* Build configuration list for PBXProject "QuickCard2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB28044E2AC55506003E9C05 /* Debug */,
+				DB28044F2AC55506003E9C05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB2804502AC55506003E9C05 /* Build configuration list for PBXNativeTarget "QuickCard2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB2804512AC55506003E9C05 /* Debug */,
+				DB2804522AC55506003E9C05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB28043A2AC55506003E9C05 /* Project object */;
+}

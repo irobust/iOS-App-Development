@@ -66,6 +66,34 @@
     }
     ```
 
+## ดึงผลลัพธ์จาก API ไปแสดงใน List
+1. ประกาศตัวแปรขึ้นมารับ data
+    ```
+    var todos: [TodoElement] = []
+    ```
+1. สร้าง Array ขึ้นมารับข้อมูล
+    ```
+    AF.request(BASE_URL, method: .get).responseDecodable(of: Todo.self) { response in
+        switch response.result {
+        case .success:
+            let result = response.value ?? []
+            todos.removeAll()
+            todos.append(contentsOf: result)
+        case .failure(let error):
+            print(error)
+        }
+    }
+    ```
+
+1. นำ Todos ไปแสดงใน List
+    ```
+    List {
+        ForEach(todos) { todo in
+            Text(todo.title)
+        }
+    }
+    ```
+
 ## จำลอง Server ด้วย JSON Server
 ### Allow HTTP protocol
 1. เลือก Project > Info
@@ -73,5 +101,17 @@
 1. กดปุ่ม + เพิ่ม __Allow Arbitary Network__
 1. Set เป็น __YES__
 
-## ดึงผลลัพธ์จาก API ไปแสดงใน List
+### ติดตั้ง JSON Server
+1. install json server
+    ```
+    npm install json-server
+    ```
+1. นำ ตัวอย่าง JSON ไปจำลอง API
+    * สร้างไฟล์ todos.json
+    * copy ผลลัพธ์จาก json-placeholder
 
+1. เข้าไปใน folder ที่เราเก็บ todos.json ไว้แล้ว run
+    ```
+    json-server todos.json
+    ```
+1. เปลี่ยน URL จาก json-placeholder ไปเป็น http://localhost:3000/todos

@@ -231,8 +231,10 @@
             
             func updateSchema(){
                 let config = Realm.Configuration(schemaVersion: 1){ migration, oldSchemaVersion in
-                    migration.enumerateObjects(ofType: ShoppingList.className()) { _, newObject in
-                        newObject!["items"] = List<ShoppingItem>()
+                    if(oldSchemaVersion < 1) {
+                        migration.enumerateObjects(ofType: ShoppingList.className()) { _, newObject in
+                            newObject!["items"] = List<ShoppingItem>()
+                        }
                     }
                 }
                 
@@ -325,9 +327,37 @@
         }
     }
     ```
+1. เพิ่ม ตัวแปรสำหรับการระบุ column
+    ```
+    let columns = Array(repeating: GridItem(), count: 3)
+    let categories = ["electric", "fruit", "food", "beverages", "snack", "equipments"]
+    ```
+1. เพิ่ม LazyVGrid เข้าไป
+    ```
+    LazyVGrid(columns: columns,spacing: 5) {
+        ForEach(categories, id: \.self){ item in
+            Text(item)
+                .padding()
+                .frame(width: 130)
+                .background(.blue)
+                .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous ))
+                .foregroundColor(.white)
+                
+        }
+    }.padding()
+    ```
+1. เพิ่ม @State สำหรับ Selected category
+    ```
+    @State private var selectedCategory = ""
+    ```
+1. ใส่เงื่อนไขใน background
+    ```
+    .backgound(selectedCategory == item ? .blue : .orange)
+    ```
 1. เพ่ิม TextFied ในหน้า AddShoppingItem
     ```
     NavigationView {
+        ...
         Form {
             TextField("Title: ", text: $title)
             TextField("quantity: ", text: $qty)
@@ -346,13 +376,30 @@
     ```
 1. เพิ่มตัวแปร State สำหรับ input ที่เราจะใส่เข้าไป 2 ตัวคือ title และ quantity
     ```
-
+    @State private var title = ""
+    @State private var qty = ""
+    ```
+1. เพิ่ม Category เข้าไปใน ShoppingItem
+    ```
+    @Persisted var category: String
+    ```
+1. เพิ่ม Schema เข้าไปใน function updateSchema ใน Migrartor
+    ```
+    let config = Realm.Configuration(schemaVersion: 2){ migration, oldSchemaVersion in
+                    ...
+                    if(oldSchemaVersion < 2) {
+                        migration.enumerateObjects(ofType: ShoppingList.className()) { _, newObject in
+                            newObject!["category"] = ""
+                        }
+                    }
+                }
     ```
 1. เพิ่ม shoppingListItem เข้าไปใน ShoppingList
     ```
     let shoppingItem = ShoppingItem()
     shoppingItem.title = title
     shoppingItem.qty = Int(qty) ?? 1
+    shoppingItem.category = selectedCategory
     $shoppingList.items.append(shoppingItem)
 
     dismiss()
