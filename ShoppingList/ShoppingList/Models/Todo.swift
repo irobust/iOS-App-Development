@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct TodoElement: Codable {
+struct TodoElement: Codable, Identifiable {
     let userID, id: Int
     let title: String
     let completed: Bool

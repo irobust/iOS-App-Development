@@ -9,14 +9,14 @@ import SwiftUI
 import Alamofire
 
 struct Todos: View {
-    var todos: [TodoElement] = []
+    @State var todos: [TodoElement] = []
     var body: some View {
         VStack{
-//            List {
-//                ForEach(todos) { todo in
-//                    Text(todo.title)
-//                }
-//            }
+            List {
+                ForEach(todos) { todo in
+                    Text(todo.title)
+                }
+            }
         }
         .onAppear {
             loadData()
@@ -29,9 +29,8 @@ struct Todos: View {
             switch response.result {
             case .success:
                 let result = response.value ?? []
-                for todo in result {
-                    print(todo.title)
-                }
+                self.todos.removeAll()
+                self.todos.append(contentsOf: result)
             case .failure(let error):
                 print(error)
             }

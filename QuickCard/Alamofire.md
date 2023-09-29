@@ -69,7 +69,7 @@
 ## ดึงผลลัพธ์จาก API ไปแสดงใน List
 1. ประกาศตัวแปรขึ้นมารับ data
     ```
-    var todos: [TodoElement] = []
+    @State var todos: [TodoElement] = []
     ```
 1. สร้าง Array ขึ้นมารับข้อมูล
     ```
