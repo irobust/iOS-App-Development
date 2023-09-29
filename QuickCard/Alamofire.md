@@ -67,6 +67,7 @@
     ```
 
 ## ดึงผลลัพธ์จาก API ไปแสดงใน List
+### ดึง API จากในหน้า View (ง่ายแต่จะทำให้ View มี code เยอะเกินไป)
 1. ประกาศตัวแปรขึ้นมารับ data
     ```
     @State var todos: [TodoElement] = []
@@ -89,6 +90,60 @@
     ```
     List {
         ForEach(todos) { todo in
+            Text(todo.title)
+        }
+    }
+    ```
+### แยก Code ของ Alamofire ไปไว้ใน View Model
+1. สร้าง ViewModel ใหม่ชื่อ TodoViewModel
+1. สร้าง class TodoViewModel
+    ```
+    class TodoViewModel: ObservableObject{
+        @Published var todos: [TodoElement] = []
+    }
+    ```
+
+1. ย้าย function loadData จาก View มาไว้ใน TodoViewModel
+    ```
+    class TodoViewModel: ObservableObject{
+        @Published var todos: [TodoElement] = []
+        
+        func loadData(){
+            AF.request("https://jsonplaceholder.typicode.com/todos", method: .get)
+            .responseDecodable(of: Todo.self) { response in
+                switch response.result {
+                case .success:
+                    let result = response.value ?? []
+                    self.todos.removeAll()
+                    self.todos.append(contentsOf: result)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    ```
+1. แก้ไข onAppear ใน VStack เป็น
+    ```
+    VStack{
+            List {
+                ....
+            }
+    }
+    .onAppear {
+        todoViewModel.loadData()
+    }
+    ```
+    
+1. สร้าง @StateObject
+    ```
+    @StateObject var todoViewModel = TodoViewModel()
+    ```
+
+1. เปลี่ยน ForEach ใน List ให้เป็น todoViewModel.todos
+    ```
+    List {
+        ForEach(todoViewModel.todos) { todo in
             Text(todo.title)
         }
     }

@@ -9,20 +9,24 @@ import SwiftUI
 import Alamofire
 
 struct Todos: View {
+    @StateObject var todoViewModel = TodoViewModel()
+    
+    // ตัวแปรนี้จะไม่ใช้แล้วหลังจากมี ViewModel
     @State var todos: [TodoElement] = []
     var body: some View {
         VStack{
             List {
-                ForEach(todos) { todo in
+                ForEach(todoViewModel.todos) { todo in
                     Text(todo.title)
                 }
             }
         }
         .onAppear {
-            loadData()
+            todoViewModel.loadData()
         }
     }
     
+    // ฟังก์ชั้นนี้จะไม่ใช้แล้วหลังจากมี ViewModel
     func loadData(){
         AF.request("https://jsonplaceholder.typicode.com/todos", method: .get)
           .responseDecodable(of: Todo.self) { response in
@@ -37,6 +41,7 @@ struct Todos: View {
         }
     }
     
+    // ฟังก์ชั้นนี้จะไม่ใช้แล้วหลังจากมี ViewModel
     func loadStringData(){
         AF.request("https://jsonplaceholder.typicode.com/todos", method: .get)
             .responseString { response in

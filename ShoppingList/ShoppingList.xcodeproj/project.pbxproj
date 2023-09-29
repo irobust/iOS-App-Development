@@ -22,6 +22,7 @@
 		DB2804922AC6CEDA003E9C05 /* ShoppingItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804912AC6CEDA003E9C05 /* ShoppingItemViewModel.swift */; };
 		DB2804942AC6D68A003E9C05 /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804932AC6D68A003E9C05 /* Todos.swift */; };
 		DB2804962AC6D91D003E9C05 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804952AC6D91D003E9C05 /* Todo.swift */; };
+		DB2804982AC6DF37003E9C05 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2804972AC6DF37003E9C05 /* TodoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		DB2804912AC6CEDA003E9C05 /* ShoppingItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemViewModel.swift; sourceTree = "<group>"; };
 		DB2804932AC6D68A003E9C05 /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
 		DB2804952AC6D91D003E9C05 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		DB2804972AC6DF37003E9C05 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				DB2804912AC6CEDA003E9C05 /* ShoppingItemViewModel.swift */,
+				DB2804972AC6DF37003E9C05 /* TodoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				DB2804922AC6CEDA003E9C05 /* ShoppingItemViewModel.swift in Sources */,
 				DB28048B2AC6ADF1003E9C05 /* Migrator.swift in Sources */,
 				DB2804942AC6D68A003E9C05 /* Todos.swift in Sources */,
+				DB2804982AC6DF37003E9C05 /* TodoViewModel.swift in Sources */,
 				DB28048D2AC6B2D6003E9C05 /* ShoppingItemList.swift in Sources */,
 				DB2804962AC6D91D003E9C05 /* Todo.swift in Sources */,
 				DB2804812AC68B79003E9C05 /* AddShoppingList.swift in Sources */,
